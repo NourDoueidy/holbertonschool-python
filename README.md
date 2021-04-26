@@ -1,2 +1,1 @@
-# holbertonschool-python
-Python
+Higher level programming with python
