@@ -4,4 +4,4 @@ def no_c(my_string):
     for i in len(my_string):
         if i =! "c" and i =! "C":
             new_string =+ i
-            print("{}".format(new_string))
+            return new_string
