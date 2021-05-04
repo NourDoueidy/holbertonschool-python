@@ -5,7 +5,7 @@ def best_score(a_dictionary):
     max_value = 0
     max_key = None
     for a, b in a_dictionary.items():
-        if a > max_value:
-            max_value = a
-            max_key = b
+        if b > max_value:
+            max_value = b
+            max_key = a
     return max_key
