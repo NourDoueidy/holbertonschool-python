@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
     i = 0
-    n_list = []
+    nl = []
     while i < list_length:
         res = 0
         try:
@@ -13,6 +13,6 @@ def list_division(my_list_1, my_list_2, list_length):
         except IndexError:
             print("out of range")
         finally:
-            n_list.append(res)
+            nl.append(res)
             i += 1
-    return n_list
+    return nl
