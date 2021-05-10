@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Square module."""
+
+
 class Square:
-    """Defines a square.
-    """
+    '''Initialize square"
+    '''
     pass
-    def __init__(self, size=0)
-        """Initialize a new square.
-        """
+
+    def __init__(self, size=0):
+        '''init method of class Square
+        '''
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
