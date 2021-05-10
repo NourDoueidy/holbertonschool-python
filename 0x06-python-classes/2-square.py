@@ -2,7 +2,7 @@
 
 
 class Square:
-    '''Initialize square"
+    '''Class Square object intialized with size
     '''
     pass
 
