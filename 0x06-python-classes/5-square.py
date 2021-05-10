@@ -2,11 +2,11 @@
 """Square module."""
 
 class Square:
-    '''Initialize Class Square
+    '''Define Square
     '''
 
     def __init__(self, size=0):
-        '''init method of class Square
+        '''initialize Square
         '''
         self.size = size
 
