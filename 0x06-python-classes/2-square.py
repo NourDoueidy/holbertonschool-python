@@ -2,6 +2,7 @@
 """Square module."""
 class Square:
     """Defines a square."""
+    pass
     def __init__(self, size=0)
         """Initialize a new square.
         """
