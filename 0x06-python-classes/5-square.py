@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Square module."""
+
 
 class Square:
-    '''Define Square.
+    '''Initialize Class Square
     '''
 
     def __init__(self, size=0):
-        '''initialize Square
+        '''init method of class Square
         '''
         self.size = size
 
