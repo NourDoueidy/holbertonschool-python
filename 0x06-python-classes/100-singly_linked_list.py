@@ -2,52 +2,53 @@
 """Square module."""
 
 class Node:
-"""Define Square"""
+    """Represent a node in a singly-linked list."""
+
     def __init__(self, data, next_node=None):
-        """initialize square.
+        """Initialize a new Node.
         Args:
-            data (int)
-            next_node (Node)
+            data (int): The data of the new Node.
+            next_node (Node): The next node of the new Node.
         """
         self.data = data
         self.next_node = next_node
-    
+
     @property
     def data(self):
-        """Get/set data"""
-        return self.__data
+        """Get/set the data of the Node."""
+        return (self.__data)
 
     @data.setter
     def data(self, value):
-        if type(value) is not int:
+        if not isinstance(value, int):
             raise TypeError("data must be an integer")
         self.__data = value
 
     @property
-    def next_node(self)
-        """Get/set next_node"""
-        return self.__next_data
+    def next_node(self):
+        """Get/set the next_node of the Node."""
+        return (self.__next_node)
 
     @next_node.setter
     def next_node(self, value):
-        if value is not None and type(value) != Node:
+        if not isinstance(value, Node) and value is not None:
             raise TypeError("next_node must be a Node object")
-        self.next_node = value
+        self.__next_node = value
 
 
 class SinglyLinkedList:
-    """Define a singly linked list"""
+    """Represent a singly-linked list."""
 
-    
     def __init__(self):
-        """initiate a new Singley linked list.
-        """
-        self.head = None
-        
+        """Initalize a new SinglyLinkedList."""
+        self.__head = None
+
     def sorted_insert(self, value):
-        """insert a new Node 
+        """Insert a new Node to the SinglyLinkedList.
+        The node is inserted into the list at the correct
+        ordered numerical position.
         Args:
-            value
+            value (Node): The new Node to insert.
         """
         new = Node(value)
         if self.__head is None:
