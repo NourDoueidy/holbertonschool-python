@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Node module"""
+"""Define classes for a singly linked list."""
 class Node:
     """Represent a node in a singly-linked list."""
 
