@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Square module."""
 
 class Node:
     """Represent a node in a singly-linked list."""
