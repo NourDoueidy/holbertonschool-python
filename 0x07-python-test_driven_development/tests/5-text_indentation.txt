@@ -10,7 +10,7 @@ How to use 5-text_indentation.py
     Traceback (most recent call last):
     TypeError: text must be a string
 
-    >>> text_indentation({"Potato": "vegetable", "Apple": fruit})
+    >>> text_indentation({"Potato": "vegetable", "Apple": "fruit"})
     Traceback (most recent call last):
     TypeError: text must be a string
 
