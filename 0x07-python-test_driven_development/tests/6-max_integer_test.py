@@ -32,6 +32,9 @@ class TestMaxInteger(unittest.TestCase):
         """Test a list of numbers"""
         mid = [5, 4, 15, 3, 1]
         self.assertEqual(max_integer(mid), 15)
+        
+if __name__ == '__main__':
+unittest.main()
 
     def test_max_end(self):
         """Test a list of numbers"""
