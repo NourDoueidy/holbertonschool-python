@@ -6,61 +6,45 @@ The function "add_integer(a, b=98)" returns the sum of its two arguments.
 Test:
 
     >>> add_integer = __import__("0-add_integer").add_integer
-   >>> add_integer(2, 3)
-5
+    >>> add_integer(1, 6)
+    7
 
->>> add_integer(100.3, -2)
-98
+    >>> add_integer(2, -4)
+    -2
 
->>> add_integer(-True, False)
--1
+    >>> add_integer(4.0, 8.0)
+    12
+    
+    floats are casted to ints before addition:
+    
+    >>> add_integer(3.1, 4.2)
+    7
+    
 
->>> add_integer(-True, -False)
--1
+    
+    floats and integers can be added:
+    
+    >>> add_integer(3, -4.2)
+    -1
+    
 
->>> add_integer(True, False)
-1
+    
+    b is 98 by default:
+    
+    >>> add_integer(4)
+    102
+    
 
->>> add_integer(True, -False)
-1
+    >>> add_integer("v", 2)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
 
->>> add_integer(100.3, 100.3)
-200
-
->>> add_integer("school", 100.3)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer("Holberton", "School")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer(None, "School")
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer(5.25, 3.3)
-8
-
->>> add_integer(10, None)
-Traceback (most recent call last):
-...
-TypeError: b must be an integer
-
->>> add_integer("adc", 10)
-Traceback (most recent call last):
-...
-TypeError: a must be an integer
-
->>> add_integer(float('inf'),8)
-Traceback (most recent call last):
-...
-OverflowError: cannot convert float infinity to integer
-
->>> add_integer(float('NaN'), 7)
-Traceback (most recent call last):
-...
-ValueError: cannot convert float NaN to integer
+    >>> add_integer(3, "v")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+    
+    TypeError mesage is only printed for the first argument:
+    
+    >>> add_integer("x", "y")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
