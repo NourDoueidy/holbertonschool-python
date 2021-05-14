@@ -19,15 +19,15 @@ How to us 4-print_square.py
 
     >>> print_square("sixteen")
     Traceback (most recent call last):
-    ValueError: size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square(-3.8)
     Traceback (most recent call last):
-    ValueError: size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square(None)
     Traceback (most recent call last):
-    ValueError: size must be an integer
+    TypeError: size must be an integer
 
     >>> print_square()
     Traceback (most recent call last):
