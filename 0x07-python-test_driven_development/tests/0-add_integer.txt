@@ -38,5 +38,3 @@ Test:
     >>> add_integer("x", "y")
     Traceback (most recent call last):
     TypeError: a must be an integer
-    
-    (TypeError mesage is only printed for the first argument)
