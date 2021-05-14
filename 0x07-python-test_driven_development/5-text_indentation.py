@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a text indentation function."""
 
+
 def text_indentation(text):
     """This function prints a text with 2 lines after ., ? and :
     Args:
