@@ -6,8 +6,8 @@ class Rectangle:
     """Represents a rectangle"""
     def __init__(self, width=0, height=0):
         """Initialize a new class rectangle"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -43,10 +43,10 @@ class Rectangle:
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self.__width * 2) + (self.__height * 2))
+        return ((self.width * 2) + (self.height * 2))
 
     def __str__(self):
         """Returns string representation"""
         if self.width == 0 or self.height == 0:
             return ""
-        return (("#" * self.width + "\n") * self.height)
+        return (("#" * self.width + "\n") * self.height)[:-1]
