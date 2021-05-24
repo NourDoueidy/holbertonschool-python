@@ -1,0 +1,6 @@
+How to use 1-my_list.py
+=======================
+
+>>> Mylist = __import__("1-my_list").Mylist
+
+
