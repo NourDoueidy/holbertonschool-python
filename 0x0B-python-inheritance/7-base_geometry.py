@@ -4,9 +4,11 @@
 
 class BaseGeometry:
     """Defines a class"""
+    
     def area(self):
         """Function that calculates area"""
         raise Exception("area() is not implemented")
+    
     def integer_validator(self, name, value):
         """Function that validate integers"""
         if type(value) is not int:
