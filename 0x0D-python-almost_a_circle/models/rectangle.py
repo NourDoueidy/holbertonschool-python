@@ -28,6 +28,15 @@ class Rectangle(Base):
         """Return string info about the rectangle"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
+    def update(self, *args):
+        """updates public method"""
+        self.id = arg
+        self.width = arg
+        self.height = arg
+        self.x = arg
+        self.y = arg
+
+
     @property
     def width(self):
         """Getter for width"""
