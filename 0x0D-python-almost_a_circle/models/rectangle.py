@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 """Module for class Rectangle"""
-
 from models.base import Base
 
 
 class Rectangle(Base):
     """Defines a class Rectangle that inherits from Base"""
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
@@ -27,14 +25,6 @@ class Rectangle(Base):
     def __str__(self):
         """Return string info about the rectangle"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
-
-    def update(self, *args):
-        """updates public method"""
-        self.id = arg
-        self.width = arg
-        self.height = arg
-        self.x = arg
-        self.y = arg
 
 
     @property
