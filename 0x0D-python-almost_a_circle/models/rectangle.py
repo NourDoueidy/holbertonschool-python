@@ -14,6 +14,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+<<<<<<< HEAD
     def area(self):
         """Returns the area value of the rectangle"""
         return self.__width * self.__height
@@ -27,6 +28,8 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
 
+=======
+>>>>>>> 221accbaefbe9746c6bb665876e7e76c11a062f3
     @property
     def width(self):
         """Getter for width"""
@@ -46,6 +49,8 @@ class Rectangle(Base):
     def height(self):
         """Getter for height"""
         return self.__height
+    
+    
 
     @height.setter
     def height(self, value):
@@ -86,3 +91,11 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
+
+    def area(self):
+        """Returns the area value of the rectangle"""
+        return self.__width * self.__height
+    
+    def display(self):
+        """Prints the Rectangle instance with the character #"""
+	return (("#" * self.width + "\n") * self.height)[:-1]
