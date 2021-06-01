@@ -18,7 +18,7 @@ class Square(Rectangle):
         """Updates class"""
         if args:
             if len(args) >= 1:
-                self.__size = args[0]
+                self.__id = args[0]
             if len(args) >= 2:
                 self.__size = args[1]
             if len(args) >= 3:
