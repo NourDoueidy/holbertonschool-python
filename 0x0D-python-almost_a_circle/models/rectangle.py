@@ -93,14 +93,17 @@ class Rectangle(Base):
     def update(self, *args):
         """Updates class"""
         for arg in args:
-            if arg == 1:
-                self.id = id
-            elif arg == 2:
-                self.width = width
-            elif arg == 3:
-                self.height = height
-            elif arg == 4:
-                self.x = x
-            elif arg == 5:
-                self.y = y
-        return arg
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
