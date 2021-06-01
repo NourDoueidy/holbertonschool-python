@@ -83,7 +83,7 @@ class Rectangle(Base):
         """Updates class"""
         a = 0
         for arg in args:
-            if a ==0:
+            if a == 0:
                 self.id = arg
             elif a == 1:
                 self.width = arg
