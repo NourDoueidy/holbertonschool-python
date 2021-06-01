@@ -39,3 +39,10 @@ class Base:
 
         with open(new_file, "w", encoding='utf-8') as f:
             f.write(cls.to_json_string(ls))
+
+    def from_json_string(json_string):
+        """Returns JSON string representation json_string"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
