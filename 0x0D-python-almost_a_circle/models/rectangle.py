@@ -79,7 +79,7 @@ class Rectangle(Base):
         """String representing the rectangle"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates class"""
         if args:
             if len(args) >= 1:
@@ -92,3 +92,7 @@ class Rectangle(Base):
                 self.__x = args[3]
             if len(args) >= 5:
                 self.__y = args[4]
+                
+        elif kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
