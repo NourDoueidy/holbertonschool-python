@@ -17,7 +17,7 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """Updates class"""
         if args:
-            if len(args) >= 2:
+            if len(args) >= 1:
                 self.__size = args[0]
             if len(args) >= 2:
                 self.__size = args[1]
