@@ -82,4 +82,7 @@ class Rectangle(Base):
     
     def display(self):
         """Prints the Rextangle instance with the character #"""
-	return ("#" * width + "\n") * height
+	for i in range(self.__width):
+            for j in range(self.__height):
+                print("#", end="")
+            print()
