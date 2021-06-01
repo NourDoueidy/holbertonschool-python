@@ -6,10 +6,10 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """Defines a class Square"""
 
-    def __inot__(self, size, x=0, y=0, id=None):
+    def __init__(self, size, x=0, y=0, id=None):
         """Constructor"""
         super().__init__(size, sixe, x, y, id)
 
     def __str__(self):
         """string representation of square"""
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, id, x, y, width)
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__, self.id, self.x, self.y, self.width)
