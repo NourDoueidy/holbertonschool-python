@@ -32,7 +32,7 @@ class Rectangle(Base):
     def height(self):
         """Set/get the height of the Rectangle."""
         return self.__height
-
+    
     @height.setter
     def height(self, value):
         if type(value) != int:
@@ -93,4 +93,4 @@ class Rectangle(Base):
                 self.x = arg
             elif a == 4:
                 self.y = arg
-            a += 1    
+            a += 1
