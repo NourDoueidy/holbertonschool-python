@@ -23,4 +23,4 @@ class Base:
         else:
             if type(list_dictionaries) is not list:
                 raise TypeError("list_dictionaries must be a list")
-            return json.dumps(list-dictionaries)
+        return json.dumps(list-dictionaries)
