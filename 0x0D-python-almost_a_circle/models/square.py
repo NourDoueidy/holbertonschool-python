@@ -28,3 +28,14 @@ class Square(Rectangle):
         elif kwargs:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    @property
+    def size(self):
+        """Getter for size."""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """Setter for size - based off width and height."""
+        self.width = value
+        self.height = value            
