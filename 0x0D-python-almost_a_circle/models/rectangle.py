@@ -87,3 +87,4 @@ class Rectangle(Base):
         for i in range(self.width):
             for j in range(self.height):
                 return (("#" * self.__width + "\n") * self.__height)[:-1]
+            return()
