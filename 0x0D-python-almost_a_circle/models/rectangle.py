@@ -91,4 +91,4 @@ class Rectangle(Base):
         
     def __str__(self):
         """String representing the rectangle"""
-        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height) 
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
