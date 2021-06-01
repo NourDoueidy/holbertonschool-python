@@ -21,4 +21,6 @@ class Base:
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
+            if type(list_dictionaries) is not list:
+                raise TypeError("list_dictionaries must be a list")
             return json.dumps(list-dictionaries)
