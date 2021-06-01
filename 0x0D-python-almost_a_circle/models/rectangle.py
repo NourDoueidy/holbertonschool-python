@@ -89,3 +89,18 @@ class Rectangle(Base):
     def __str__(self):
         """String representing the rectangle"""
         return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """Updates class"""
+        for arg in args:
+            if arg == 1:
+                self.id = id
+            elif arg == 2:
+                self.width = width
+            elif arg == 3:
+                self.height = height
+            elif arg == 4:
+                self.x = x
+            elif arg == 5:
+                self.y = y
+        return arg
