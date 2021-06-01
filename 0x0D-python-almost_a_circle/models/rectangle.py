@@ -33,6 +33,8 @@ class Rectangle(Base):
     def height(self):
         """Getter for height"""
         return self.__height
+    
+    
 
     @height.setter
     def height(self, value):
@@ -77,3 +79,7 @@ class Rectangle(Base):
     def area(self):
         """Returns the area value of the rectangle"""
         return self.__width * self.__height
+    
+    def display(self):
+        """Prints the Rextangle instance with the character #"""
+	return ("#" * width + "\n") * height
