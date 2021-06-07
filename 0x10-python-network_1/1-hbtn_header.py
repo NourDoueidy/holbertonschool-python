@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """Sends a request to the URL and displays the value of X_Request-Id"""
 import sys
 import urllib.request
