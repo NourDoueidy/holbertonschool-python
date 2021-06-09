@@ -2,47 +2,23 @@
 #utf-8 validation
 
 def validUTF8(data):
-    index = 0
-        while index < len(data):
-            number = data[index] & (2 ** 7)
-            number >>= (NUMBER_OF_BITS_PER_BLOCK - 1)
-            if number == 0:  # single byte char
-                index += 1
+    nbytes = 0
+
+    m1 = 1 << 7
+    m2 = 1 << 6
+
+    for i in data:
+        m = 1 << 7
+        if nbytes == 0:
+            while m & i:
+                nbytes += 1
+                m = m >> 1
+            if nbytes == 0:
                 continue
-
-            # validate multi-byte char
-            number_of_ones = 0
-            while True:  # get the number of significant ones
-                number = data[index] & (2 ** (7 - number_of_ones))
-                number >>= (NUMBER_OF_BITS_PER_BLOCK - number_of_ones - 1)
-                if number == 1:
-                    number_of_ones += 1
-                else:
-                    break
-
-                if number_of_ones > MAX_NUMBER_OF_ONES:
-                    return False  # too much ones per char sequence
-
-            if number_of_ones == 1:
-                return False  # there has to be at least 2 ones
-
-            index += 1  # move on to check the next byte in a multi-byte char sequence
-
-            # check for out of bounds and exit early
-            if index >= len(data) or index >= (index + number_of_ones - 1):
-                return False  
-
-            # every next byte has to start with "10"
-            for i in range(index, index + number_of_ones - 1):
-                number = data[i]
-
-                number >>= (NUMBER_OF_BITS_PER_BLOCK - 1)
-                if number != 1:
-                    return False
-                number >>= (NUMBER_OF_BITS_PER_BLOCK - 1)
-                if number != 0:
-                    return False
-
-                index += 1
-
-        return True
+            if nbytes == 1 or nbytes > 4:
+                return False
+        else:
+            if not (i & m1 and not (i & m2)):
+                return False
+        nbytes -= 1
+    return nbytes == 0
