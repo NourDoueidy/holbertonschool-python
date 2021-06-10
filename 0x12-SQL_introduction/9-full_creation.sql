@@ -1,4 +1,5 @@
---Create second_table and insert values for id, name and score
+--Create second_table and 
+--Insert values for id, name and score
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
