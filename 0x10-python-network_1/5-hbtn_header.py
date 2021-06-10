@@ -7,4 +7,4 @@ import sys.argv
 
 if __name__ == "__main__":
     resp = requests.get(argv[1])
-    print(response.headers.get("X-Request-Id"))
+    print(resp.headers.get("X-Request-Id"))
