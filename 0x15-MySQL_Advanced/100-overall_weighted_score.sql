@@ -2,7 +2,7 @@
 -- Create a procedure ComputeOverallWeightedScoreForUser that computes and store the overall weighted score for a student.
 DROP PROCEDURE IF EXISTS ComputeAverageWeightedScoreForUser;
 DELIMITER $$
-CREATE PROCEDURE ComputeAverageWeightedScoreForUser(user_id INT)
+CREATE PROCEDURE ComputeOverallWeightedScoreForUser(user_id INT)
 BEGIN
     DECLARE sum_score FLOAT;
     SET sum_score = (SELECT SUM(score * weight)
