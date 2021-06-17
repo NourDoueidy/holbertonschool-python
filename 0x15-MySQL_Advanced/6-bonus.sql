@@ -2,7 +2,7 @@
 
 DELIMITER $$
 
-CREATE PROCEDURE AddBonus(IN user_id INTEGER, IN project_name VARCHAR(255), IN score INTEGER)
+CREATE PROCEDURE AddBonus(IN user_id INT, IN project_name VARCHAR(255), IN score INT)
 BEGIN
     INSERT INTO projects(name) SELECT project_name FROM DUAL
     WHERE NOT EXISTS (SELECT * FROM projects WHERE name = project_name LIMIT 1);
