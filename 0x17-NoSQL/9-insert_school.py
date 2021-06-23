@@ -2,7 +2,7 @@
 """insert in pymongo"""
 
 
-def insert_school(mongo_collecion, **kwargs):
+def insert_school(mongo_collection, **kwargs):
     """Function that inserts a new document in a collection based on kwargs"""
-    ins_doc = mongo_collection.insert(kwargs)
-    return ins_doc
+    document_id = mongo_collection.insert(kwargs)
+    return document_id
