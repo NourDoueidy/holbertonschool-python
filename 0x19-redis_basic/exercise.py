@@ -1,5 +1,7 @@
 #!/usr/bin/env pyrhon3
 """Redis Exercise"""
+import redid
+import uuid4
 
 
 class Cache:
