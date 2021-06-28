@@ -5,7 +5,7 @@ import uuid
 from typing import Union
 
 
-class Cache:
+class Cache():
     """Defines a class Cache"""
 
     def __init__(self):
