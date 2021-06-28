@@ -1,4 +1,4 @@
-#!/usr/bin/env pyrhon3
+#!/usr/bin/env python3
 """Redis Exercise"""
 import redis
 import uuid
@@ -13,8 +13,6 @@ class Cache():
         self._redis = redis.Redis()
         self._redis.flushdb()
 
-    @call_history
-    @count_calls
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """generate random key and store the input data and return key"""
         key = str(uuid.uuid4())
