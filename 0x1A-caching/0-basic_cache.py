@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Basic Dicionary"""
+''' self descriptive code '''
 
-BaseCaching = __import__("base_caching").BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class BasicCache(BaseCaching):
-    """Defines the class"""
+    ''' self descriptive '''
 
     def put(self, key, item):
-        """method"""
+        ''' self descriptive '''
         if key and item:
             self.cache_data[key] = item
 
     def get(self, key):
-        """method"""
+        ''' self descriptive '''
         if key in self.cache_data:
             return self.cache_data[key]
         return None
