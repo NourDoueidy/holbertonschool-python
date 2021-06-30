@@ -18,10 +18,10 @@ class FIFOCache(BaseCaching):
                 self.cache_data[key] = item
                 return
 
-        if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
-            item_discarded = self.key_indexes.pop(0)
-            del self.cache_data[item_discarded]
-            print("Discard: {}".format(item_discarded))
+            if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+                item_discarded = self.key_indexes.pop(0)
+                del self.cache_data[item_discarded]
+                print("Discard: {}".format(item_discarded))
 
         self.cache_data[key] = item
         self.key_indexes.append(key)
