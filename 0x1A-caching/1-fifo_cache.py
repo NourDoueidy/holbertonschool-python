@@ -23,8 +23,8 @@ class FIFOCache(BaseCaching):
                 del self.cache_data[item_discarded]
                 print("Discard: {}".format(item_discarded))
 
-        self.cache_data[key] = item
-        self.key_indexes.append(key)
+            self.cache_data[key] = item
+            self.key_indexes.append(key)
  
     def get(self, key):
         ''' self descriptive '''
