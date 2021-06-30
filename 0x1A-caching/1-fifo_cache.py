@@ -4,7 +4,7 @@
 BaseCaching = __import__("base_caching").BaseCaching
 
 
-class FifoCache(BaseCaching):
+class FIFOCache(BaseCaching):
     """Defines a class"""
 
     def __init__(self):
