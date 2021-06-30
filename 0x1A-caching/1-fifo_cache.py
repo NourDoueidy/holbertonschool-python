@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Fifo Caching"""
 
-BaseCaching = __import__ ("base_caching").BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class FifoCache(BaseCaching):
