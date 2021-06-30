@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Basic Dicionary"""
 
 BaseCaching = __import__("base_caching").BaseCaching
@@ -7,7 +7,7 @@ BaseCaching = __import__("base_caching").BaseCaching
 class BasicCache(BaseCaching):
     """Defines the class"""
 
-    def put(self, key item):
+    def put(self, key, item):
         """method"""
         if key and item:
              self.cache_data[key] = item
