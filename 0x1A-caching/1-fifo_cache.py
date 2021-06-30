@@ -1,19 +1,19 @@
 #!/usr/bin/python3
-"""Fifo Caching"""
+'''Fifo Caching'''
 
 BaseCaching = __import__("base_caching").BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    """Defines a class"""
+    '''Defines a class'''
 
     def __init__(self):
-        """Initializer"""
+       '''Initializer'''
         super().__init__()
         self.key_indexes = []
 
     def put(self, key, item):
-        """self descriptive"""
+        '''self descriptive'''
         if key and item:
             if key in self.cache_data:
                 self.cache_data[key] = item
@@ -21,14 +21,14 @@ class FIFOCache(BaseCaching):
 
         if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
             item_discarded = self.key_indexes.pop(0)
-            del self.cache_data[itm_discarded]
-            print("Discard: {}".format(item_discarded)
+            del self.cache_data[item_discarded]
+            print("Discard: {}".format(item_discarded))
 
         self.cache_data[key] = item
         self.key_indexes.append(key)
  
     def get(self, key):
-        """self descriptive"""
+        '''self descriptive'''
         if key in self.cache_data:
             return self.cache_data[key]
         return None
