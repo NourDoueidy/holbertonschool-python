@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-'''Fifo Caching'''
+''' self descriptive code '''
 
-BaseCaching = __import__("base_caching").BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
 
 
 class FIFOCache(BaseCaching):
-    '''Defines a class'''
+    ''' self descriptive '''
 
     def __init__(self):
-       '''Initializer'''
         super().__init__()
         self.key_indexes = []
 
     def put(self, key, item):
-        '''self descriptive'''
+        ''' self descriptive '''
         if key and item:
             if key in self.cache_data:
                 self.cache_data[key] = item
@@ -28,7 +27,7 @@ class FIFOCache(BaseCaching):
         self.key_indexes.append(key)
  
     def get(self, key):
-        '''self descriptive'''
+        ''' self descriptive '''
         if key in self.cache_data:
             return self.cache_data[key]
         return None
