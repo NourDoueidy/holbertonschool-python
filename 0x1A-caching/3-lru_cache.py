@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 ''' lru cache '''
 
-from collections import OrderdDict
+from collections import OrderedDict
 
 
 BaseCaching = __import__('base_caching').BaseCaching
