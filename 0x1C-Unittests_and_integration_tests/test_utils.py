@@ -2,7 +2,7 @@
 ''' test module '''
 
 import unittest
-import parametrized
+from parametrized import parametrized
 from utils import access_nested_map
 
 
